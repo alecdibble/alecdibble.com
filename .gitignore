@@ -26,3 +26,4 @@ _testmain.go
 # Hugo default output directory
 alecdibble/public
 alecdibble/staging
+alecdibble/static
