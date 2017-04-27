@@ -14,16 +14,12 @@ var sassOptions = {
   outputStyle: 'expanded'
 };
 
-var autoprefixerOptions = {
-  browsers: ['last 2 versions', '> 5%']
-};
-
 gulp.task('compile-sass', function(){
 
   var compile = gulp.src('dev/sass/main.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(autoprefixer())
     .pipe(gConcat('styles.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css/'));
@@ -49,7 +45,7 @@ gulp.task('copy-img', function(){
 });
 
 gulp.task('compile-jade', function(){
-  gulp.src(['dev/jade/*.jade'])
+  gulp.src(['dev/jade/**/*.jade'])
     .pipe(gJade({
       pretty: true
     }).on('error', util.log))

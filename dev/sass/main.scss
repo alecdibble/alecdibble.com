@@ -6,74 +6,106 @@
 @import 'global';
 
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
 
 
 
 /* Nav */
 .nav { width: 100%; }
-.nav-title { @extend %lato-light; font-size: 60px; text-align: center; }
+.nav-title { @extend %lato-light; width: 100%; max-width: 400px; margin: auto; font-size: 60px; text-align: center; position: relative;
+  @include mobile-first(1023px) { font-size: 72px;}
+}
 .nav-title-visible {
-        transition: max-height 500ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+        transition: margin-top 400ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
 
           transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */ 
-  max-height: 2000px;  
+  margin-top: 30%;
+  @include mobile-first(767px) { margin-top: 5%; }   
 }
-.nav-title-hidden {
-  -webkit-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-   -moz-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-     -o-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-        transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
-
-  -webkit-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-     -moz-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-       -o-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-          transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
-  max-height: 0;
+.nav-title-hidden { transition: margin-top 650ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */ transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */ margin-top: 5%; }
+.nav-title-sub { position: absolute;font-size: 18px;font-weight: 700;right: 54px;bottom: -15px;
+  @include mobile-first(1023px) {right: 25px;bottom: -10px;}
 }
 .nav-menu { }
-.nav-menu-button {display: block; text-indent: -9999px; width: 60px; height: 60px; background: url(/img/nav-mobile-expose.svg); background-size: 60px 60px; margin: 5% auto; margin-bottom: 10%;}
-.nav-menu-button-active { background: url(/img/nav-mobile-hide.svg); background-size: 60px 60px;}
-.nav-menu-wrapper { max-height: 0; overflow: hidden;}
-.nav-menu-item { text-align: center; margin: 10% 0; }
+.nav-menu-button {display: block; text-indent: -9999px; width: 60px; height: 60px; background: url(/img/nav-mobile-expose.svg); background-size: 60px 60px; margin: 5% auto; margin-bottom: 10%;
+  @include mobile-first(767px) { display: none; }
+}
+.nav-menu-button-active { background: url(/img/nav-mobile-hide.svg); background-size: 60px 60px;
+  @include mobile-first(767px) { background: url(/img/nav-mobile-expose.svg); background-size: 60px 60px;}
+}
+.nav-menu-wrapper { max-height: 0; overflow: hidden;
+  &:after { content: ""; display: table; clear: both;} 
+  @include mobile-first(767px) { max-height: 1000px; max-width:$containerWidth; margin: 50px auto;}
+}
+.nav-menu-item { text-align: center; margin: 10% 0; 
+  @include mobile-first(767px) { float: left; margin: auto; width: 33.33%; }
+}
 .nav-menu-link { color: $black; text-decoration: none; font-size: 36px; }
 .nav-menu-link-active { color: $blue; }
 
 .nav-wrapper-visible {
-        transition: max-height 500ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+        transition: max-height 300ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
           transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */ 
-  max-height: 300px;
+  max-height: 1000px;
+  @include mobile-first(767px) { max-height: inherit; }
+
 }
 .nav-wrapper-hidden {
-  -webkit-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-   -moz-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-     -o-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-        transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
-
-  -webkit-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-     -moz-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-       -o-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-          transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+  transition: max-height 600ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+  transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
   max-height: 0;
+  @include mobile-first(767px) { max-height: inherit; }
 }
 
 
 /* Footer */
 .footer { width: 100%; }
-.footer-icons { }
+.footer-icons { max-width: 500px; width: 100%; margin: auto;
+  &:after { content: ""; display: table; clear: both;} 
+}
+.footer-icon { float: left; width: 33.3333%; margin: 10% auto; }
+.footer-twitter { height: 34px; width: 42px; background: url(/img/footer-twitter.png); background-size: 42px 34px; display: block; margin: auto; position: relative;top:13px;}
+.footer-linkedin { height: 48px; width: 48px; background: url(/img/footer-linkedin.png); background-size: 48px 48px; display: block; margin: auto; position: relative;}
+.footer-github { height: 39px; width: 40px; background: url(/img/footer-github.png); background-size: 40px 39px; display: block; margin: auto; position: relative;top:9px;}
 
 /* General body section */
 
-.body-hr { width: 100%; border-top: 1px solid #2196F3; }
+.body-hr { width: 100%; border-top: 1px solid #2196F3; max-width: $containerWidth; margin: auto; }
 .body-clear {
     margin-top: 15%;
     margin-bottom: 15%;
     margin-left: 9%;
     font-size: 20px;
     text-align: left;
-    margin-right: 5%; line-height: 150%; }
+    margin-right: 5%; line-height: 160%; max-width: $containerWidth; 
+    @include mobile-first(767px) { margin: 75px auto; padding: 10% 0; }
+    @include mobile-first(1023px) { padding: 0; }
+}
 
 
 /* About page */
 
-.about-image{ width: 100%; background-image: url(/img/about-mountains.jpg); background-size: cover; height: 300px; background-repeat: no-repeat; }
+.body-about { @include mobile-first(1023px) { margin: 0 75px;}}
+.about-image{ width: 100%; background-image: url(/img/about-mountains.jpg); background-size: cover; height: 300px; background-repeat: no-repeat; max-width: $containerWidth; margin: auto;
+  @include mobile-first(1023px) { height: 500px; width: 100%; background-size: 100%; background-position-y: 87%; }
+}
+
+/* blog listing page */
+
+.blog-listings { width: 100%; max-width: $containerWidth; margin: 0 auto; margin-bottom: 15%; 
+  @include mobile-first(767px) { margin-bottom: 10%;  }
+}
+.blog-listing { margin: auto; max-width: $containerWidth; background-color: $blue-translucent; margin-top: 15%; 
+  @include mobile-first(767px) { margin-top: 10%; padding-left: 5%; padding-right: 5%; }
+  @include mobile-first(1000px) { margin-top: 10%; padding-left: 0; padding-right: 0; border-radius: 5px; }
+}
+.blog-listing-image { background: url(/img/blog-image-1-listing.jpg); background-size: 100%; background-repeat: no-repeat; height: 120px; width: 100%;
+  @include mobile-first(1000px) { height: 200px; border-top-left-radius: 5px; border-top-right-radius: 5px; }
+}
+.blog-listing-content {margin-top: 15%; margin-left: 5%; margin-right: 3%; padding-bottom: 15%;
+  @include mobile-first(767px) { margin-top: 10%; margin-left: 5%; margin-right: 3%; padding-bottom: 10%;  }
+  @include mobile-first(1000px) { margin-top: 30px; margin-left: 50px; margin-right: 50px; padding-bottom: 50px; }
+}
+.blog-listing-title { font-weight: 700; font-size: 24px; line-height: 140%; padding-bottom: 10px; color: $black; text-decoration: none; display: block;}
+.blog-listing-date { font-weight: 300; font-size: 16px; padding-bottom: 15px;}
+.blog-listing-body { font-size: 22px; line-height: 160%; padding-bottom: 25px;}
+.blog-listing-link { color: $blue; text-decoration: none; font-size: 22px;}

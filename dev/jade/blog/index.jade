@@ -1,0 +1,68 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    title Alec Dibble - Marketing And Technology Advice and Expertise
+    link(rel="stylesheet" href="/css/styles.css")
+
+  body
+    .nav
+      .nav-title.nav-title-hidden
+        | Alec Dibble
+      .nav-menu
+        .nav-menu-wrapper
+          .nav-menu-item
+            a(href="/").nav-menu-link
+              | About
+          .nav-menu-item
+            a(href="/blog/").nav-menu-link.nav-menu-link-active
+              | Blog
+          .nav-menu-item
+            a.nav-menu-link
+              | Contact
+        .nav-menu-button#nav-button
+    .body-hr
+    .blog-listings
+      .blog-listing
+        .blog-listing-image
+        .blog-listing-content
+          a(href="#").blog-listing-title
+            | This is a test blog title that is one line
+          .blog-listing-date
+            | January 25, 2017
+          .blog-listing-body
+            | This is definitely a test of a blog post. I think there is nothing compelling here but that is for you to decide. What do you think? Worth it?
+          a(href="#").blog-listing-link
+            | Read More >>
+      .blog-listing
+        .blog-listing-image
+        .blog-listing-content
+          a(href="#").blog-listing-title
+            | This is a test blog title that is one line
+          .blog-listing-date
+            | January 25, 2017
+          .blog-listing-body
+            | This is definitely a test of a blog post. I think there is nothing compelling here but that is for you to decide. What do you think? Worth it?
+          a(href="#").blog-listing-link
+            | Read More >>
+    .body-hr
+
+
+
+    .footer
+      .footer-icons
+        .footer-icon
+          a(href="https://twitter.com/alecdibble").footer-twitter
+        .footer-icon
+          a(href="https://www.linkedin.com/in/alecdibble/").footer-linkedin
+        .footer-icon
+          a(href="https://github.com/alecdibble").footer-github
+
+
+
+    script(type='text/javascript', src='js/deps/jquery-1.11.1.min.js')
+    script(type='text/javascript', src='js/deps/lodash.compat.min.js')
+    script(type='text/javascript', src='js/deps/modernizr.js')
+    script(type='text/javascript', src='js/site.js')

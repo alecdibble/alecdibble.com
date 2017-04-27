@@ -9,15 +9,17 @@ html(lang="en")
 
   body
     .nav
-      .nav-title
+      .nav-title.nav-title-hidden
         | Alec Dibble
+        span.nav-title-sub
+          | Consulting
       .nav-menu
         .nav-menu-wrapper
           .nav-menu-item
-            a.nav-menu-link.nav-menu-link-active
+            a(href="/").nav-menu-link.nav-menu-link-active
               | About
           .nav-menu-item
-            a.nav-menu-link
+            a(href="/blog/").nav-menu-link
               | Blog
           .nav-menu-item
             a.nav-menu-link
@@ -45,11 +47,11 @@ html(lang="en")
     .footer
       .footer-icons
         .footer-icon
-          .footer-twitter
+          a(href="https://twitter.com/alecdibble").footer-twitter
         .footer-icon
-          .footer-linkedin
+          a(href="https://www.linkedin.com/in/alecdibble/").footer-linkedin
         .footer-icon
-          .footer-github
+          a(href="https://github.com/alecdibble").footer-github
 
 
 

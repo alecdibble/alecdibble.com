@@ -1,7 +1,8 @@
 //colors
 $black: #474747;
-$white: #e5e5e5;
+$white: white;
 $blue: #2196F3;
+$blue-translucent: rgba(230, 243, 254, .7);
 
 $primaryFill: $white;
 
@@ -11,3 +12,7 @@ $phoneBreakpoint: 620px;
 $tabletBreakpoint: 980px;
 $desktopBreakpoint: 1024px;
 $hugeBreakpoint: 1600px;
+
+
+//layout
+$containerWidth: 1000px;
