@@ -3,29 +3,11 @@ html(lang="en")
   head
     meta(charset='UTF-8')
     meta(name="viewport" content="width=device-width, initial-scale=1")
-
-    title Alec Dibble - Marketing And Technology Advice and Expertise
-    link(rel="stylesheet" href="css/styles.css")
+    title Alec Dibble Consulting - Marketing And Technology Advice and Expertise
+    include /includes/head.jade
 
   body
-    .nav
-      .nav-title.nav-title-hidden
-        | Alec Dibble
-        span.nav-title-sub
-          | Consulting
-      .nav-menu
-        .nav-menu-wrapper
-          .nav-menu-item
-            a(href="/").nav-menu-link.nav-menu-link-active
-              | About
-          .nav-menu-item
-            a(href="/blog/").nav-menu-link
-              | Blog
-          .nav-menu-item
-            a.nav-menu-link
-              | Contact
-        .nav-menu-button#nav-button
-    .body-hr
+    include /includes/nav.jade
     .body-clear
       .body-about
         p
@@ -43,19 +25,4 @@ html(lang="en")
           | In my spare time, I enjoy exploring the outdoors, creating music, cooking and finding great food, and learning new skills. 
     .about-image
 
-
-    .footer
-      .footer-icons
-        .footer-icon
-          a(href="https://twitter.com/alecdibble").footer-twitter
-        .footer-icon
-          a(href="https://www.linkedin.com/in/alecdibble/").footer-linkedin
-        .footer-icon
-          a(href="https://github.com/alecdibble").footer-github
-
-
-
-    script(type='text/javascript', src='js/deps/jquery-1.11.1.min.js')
-    script(type='text/javascript', src='js/deps/lodash.compat.min.js')
-    script(type='text/javascript', src='js/deps/modernizr.js')
-    script(type='text/javascript', src='js/site.js')
+    include /includes/footer.jade
