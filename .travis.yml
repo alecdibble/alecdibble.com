@@ -14,3 +14,5 @@ deploy:
   bucket: www.alecdibble.com
   skip_cleanup: true
   local_dir: dist
+  on:
+    branch: master

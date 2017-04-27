@@ -15,7 +15,7 @@ var sassOptions = {
   outputStyle: 'compressed'
 };
 
-gulp.task('compile-sass', function(){
+gulp.task('compile-sass', function(cb){
 
   var compile = gulp.src('dev/sass/main.scss')
     .pipe(sourcemaps.init())
@@ -28,25 +28,29 @@ gulp.task('compile-sass', function(){
   if(browser_synced){
     compile.pipe(browserSync.reload({stream:true}));
   }
-
+  else {
+    return compile
+  }
 });
 
 
-gulp.task('copy-js', function(){
-  gulp.src('dev/js/**/*.js').pipe(gulp.dest('dist/js/'));
+gulp.task('copy-js', ['compile-sass'], function(cb){
+  return gulp.src(['dev/js/deps/*.js', 'dev/js/*.js'])
+  .pipe(gConcat('site.js'))
+  .pipe(gulp.dest('dist/js/'));
 });
 
 gulp.task('copy-fonts', function(){
-  gulp.src('dev/webfonts/**/*').pipe(gulp.dest('dist/webfonts/'));
+  return gulp.src('dev/webfonts/**/*').pipe(gulp.dest('dist/webfonts/'));
 });
 
 
-gulp.task('copy-img', function(){
-  gulp.src('dev/img/**/*').pipe(gulp.dest('dist/img/'));
+gulp.task('copy-img', ['copy-js'], function(cb){
+  return gulp.src('dev/img/**/*').pipe(gulp.dest('dist/img/'));
 });
 
-gulp.task('compile-jade', function(){
-  gulp.src(['dev/jade/**/*.jade'])
+gulp.task('compile-jade', ['copy-img'], function(cb){
+  return gulp.src(['dev/jade/**/*.jade'])
     .pipe(gJade({
       pretty: true,
       basedir: 'dev/jade/'
@@ -67,7 +71,7 @@ gulp.task('bs-reload', function(){
   browserSync.reload();
 });
 
-gulp.task('revision', function() {
+gulp.task('revision', ['compile-jade'], function() {
   gulp.src('dist/**')
     .pipe(revAll.revision({ dontRenameFile: [/^\/favicon.ico$/g, '.html'] }))
     .pipe(gulp.dest('dist/'));
