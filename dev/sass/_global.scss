@@ -1,0 +1,4 @@
+body{ @extend %lato-reg; background-color: $primaryFill; color: $black; }
+h1,h2,h3,h4,h5,h6{ @extend %lato-black; }
+em{ @extend %lato-reg-italic; }
+strong{ @extend %lato-bold; }

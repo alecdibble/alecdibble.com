@@ -1,0 +1,50 @@
+@mixin responsive($type: 'tablet'){
+  @if $type == 'tablet' {
+    @media(max-width: $tabletBreakpoint){
+      @content;
+    }
+  }
+  @else if $type == 'phone' {
+    @media(max-width: $phoneBreakpoint){
+      @content;
+    }
+  }
+  @else if $type == 'huge' {
+    @media(min-width: $hugeBreakpoint){
+      @content;
+    }
+  }
+  @else {
+    @media(max-width: $type){
+      @content;
+    }
+  }
+}
+
+@mixin mobile-first($type: 'tablet'){
+  @if $type == 'tablet' {
+    @media(min-width: $tabletBreakpoint){
+      @content;
+    }
+  }
+  @else if $type == 'phone' {
+    @media(min-width: $phoneBreakpoint){
+      @content;
+    }
+  }
+    @else if $type == 'desktop' {
+    @media(min-width: $desktopBreakpoint){
+      @content;
+    }
+  }
+  @else if $type == 'huge' {
+    @media(min-width: $hugeBreakpoint){
+      @content;
+    }
+  }
+  @else {
+    @media(min-width: $type){
+      @content;
+    }
+  }
+}

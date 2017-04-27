@@ -1,0 +1,51 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3059764, 2015-07-17T08:20:42-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3059764
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) 2015 by Fernando Diaz. All rights reserved.
+ *
+ * © 2015 MyFonts Inc
+*/
+
+$lato: 'Lato', sans-serif;
+
+
+@mixin defaultFontSetting(){
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+%lato-black{
+  @include defaultFontSetting();
+  font-family: $lato;
+  font-weight: 900;
+}
+%lato-bold{
+  @include defaultFontSetting();
+  font-family: $lato;
+  font-weight: 700;
+}
+%lato-reg{
+  @include defaultFontSetting();
+  font-family: $lato;
+  font-weight: 400;
+}
+%lato-reg-italic{
+  @include defaultFontSetting();
+  font-family: $lato;
+  font-weight: 400;
+  font-style: italic;
+}
+%lato-light{
+  @include defaultFontSetting();
+  font-family: $lato;
+  font-weight:300;
+}

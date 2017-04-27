@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="74px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blog-Single-Copy" transform="translate(-675.000000, -283.000000)" fill="#2397F4">
+            <path d="M717,315 L717,300.000032 C717,297.245531 714.761424,295 712,295 C709.244195,295 707,297.238591 707,300.000032 L707,315 L692.000032,315 C689.245531,315 687,317.238576 687,320 C687,322.755805 689.238591,325 692.000032,325 L707,325 L707,339.999968 C707,342.754469 709.238576,345 712,345 C714.755805,345 717,342.761409 717,339.999968 L717,325 L731.999968,325 C734.754469,325 737,322.761424 737,320 C737,317.244195 734.761409,315 731.999968,315 L717,315 Z M712,357 C691.565464,357 675,340.434536 675,320 C675,299.565464 691.565464,283 712,283 C732.434536,283 749,299.565464 749,320 C749,340.434536 732.434536,357 712,357 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

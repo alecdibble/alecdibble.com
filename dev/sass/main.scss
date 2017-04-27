@@ -1,0 +1,79 @@
+@import 'type';
+@import 'vars';
+@import 'bourbon/bourbon';
+@import 'mixins/mixins';
+@import 'normalize';
+@import 'global';
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
+
+
+
+/* Nav */
+.nav { width: 100%; }
+.nav-title { @extend %lato-light; font-size: 60px; text-align: center; }
+.nav-title-visible {
+        transition: max-height 500ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+
+          transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */ 
+  max-height: 2000px;  
+}
+.nav-title-hidden {
+  -webkit-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+   -moz-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+     -o-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+        transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+
+  -webkit-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+     -moz-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+       -o-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+          transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+  max-height: 0;
+}
+.nav-menu { }
+.nav-menu-button {display: block; text-indent: -9999px; width: 60px; height: 60px; background: url(/img/nav-mobile-expose.svg); background-size: 60px 60px; margin: 5% auto; margin-bottom: 10%;}
+.nav-menu-button-active { background: url(/img/nav-mobile-hide.svg); background-size: 60px 60px;}
+.nav-menu-wrapper { max-height: 0; overflow: hidden;}
+.nav-menu-item { text-align: center; margin: 10% 0; }
+.nav-menu-link { color: $black; text-decoration: none; font-size: 36px; }
+.nav-menu-link-active { color: $blue; }
+
+.nav-wrapper-visible {
+        transition: max-height 500ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+          transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */ 
+  max-height: 300px;
+}
+.nav-wrapper-hidden {
+  -webkit-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+   -moz-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+     -o-transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+        transition: max-height 1000ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+
+  -webkit-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+     -moz-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+       -o-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
+          transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+  max-height: 0;
+}
+
+
+/* Footer */
+.footer { width: 100%; }
+.footer-icons { }
+
+/* General body section */
+
+.body-hr { width: 100%; border-top: 1px solid #2196F3; }
+.body-clear {
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: 9%;
+    font-size: 20px;
+    text-align: left;
+    margin-right: 5%; line-height: 150%; }
+
+
+/* About page */
+
+.about-image{ width: 100%; background-image: url(/img/about-mountains.jpg); background-size: cover; height: 300px; background-repeat: no-repeat; }
