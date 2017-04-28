@@ -8,29 +8,18 @@ html(lang="en")
     include /includes/head.jade
 
   body
-    include /includes/nav.jade
+    include /includes/nav/nav-blog.jade
     .blog-listings
       .blog-listing
         .blog-listing-image
         .blog-listing-content
           a(href="#").blog-listing-title
-            | This is a test blog title that is one line
+            | Self Help
           .blog-listing-date
-            | January 25, 2017
+            | January 28, 2014
           .blog-listing-body
-            | This is definitely a test of a blog post. I think there is nothing compelling here but that is for you to decide. What do you think? Worth it?
-          a(href="#").blog-listing-link
-            | Read More >>
-      .blog-listing
-        .blog-listing-image
-        .blog-listing-content
-          a(href="#").blog-listing-title
-            | This is a test blog title that is one line
-          .blog-listing-date
-            | January 25, 2017
-          .blog-listing-body
-            | This is definitely a test of a blog post. I think there is nothing compelling here but that is for you to decide. What do you think? Worth it?
-          a(href="#").blog-listing-link
+            | Many people read self-help books for that little piece of information that will change their life. Whether it is the hidden secret to quick fat loss, the 2 steps to a higher IQ, or the click away to happiness.
+          a(href="/blog/self-help").blog-listing-link
             | Read More >>
     .body-hr
 

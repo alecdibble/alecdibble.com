@@ -79,9 +79,9 @@ gulp.task('revision', ['compile-jade'], function() {
 
 
 gulp.task('watch-sass', function(){ gulp.watch('dev/sass/**/*.scss', ['compile-sass'])});
-gulp.task('watch-js', function(){ gulp.watch('dev/js/**/*.js', ['copy-js']) });
-gulp.task('watch-img', function(){ gulp.watch('dev/img/**/*', ['copy-img']) });
-gulp.task('watch-jade', function(){ gulp.watch('dev/jade/**/*.jade', ['compile-jade']) });
+gulp.task('watch-js', function(){ gulp.watch('dev/js/**/*.js', ['copy-js',  'compile-sass']) });
+gulp.task('watch-img', function(){ gulp.watch('dev/img/**/*', ['copy-img', 'copy-js', 'compile-sass']) });
+gulp.task('watch-jade', function(){ gulp.watch('dev/jade/**/*.jade', ['compile-jade', 'revision', 'copy-img', 'copy-js', 'compile-sass']) });
 gulp.task('watch-dist', function(){ gulp.watch('dist/**/!(*.css)', ['bs-reload']) });
 
 
