@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Contact - Alec Dibble Consulting - Web & Marketing Expertise
+    meta(description="Contact me to learn about the services and expertise I can offer. From fullstack to marketing to ROI calculation through BI integration, I can be a great resource to your growth.")
+    include /includes/head.jade
+
+  body
+    include /includes/nav/nav-contact.jade
+    .body-clear
+      .body-about
+        p
+          | Thank you for checking out my website. Please fill out this form below or email me at 
+          a(href="mailto:alec@alecdibble.com")
+            | alec@alecdibble.com
+          | &nbsp;to get in touch.
+        .contact
+          form.contact-form#contact-form
+            .contact-error
+            input#input-name(type="text" name="name" placeholder="Your Name")
+            input#input-email(type="text" name="email" placeholder="Your Email Address")
+            textarea#input-message(name="message" placeholder="Your Message")
+            button.contact-submit
+              | Send to Alec
+        .contact-thanks
+          | Thanks for reaching out! I will be in touch soon.
+
+    .body-hr
+    .body-clear
+      .body-about
+        p
+          | In my spare time, I enjoy exploring the outdoors, making music, cooking, great food, and learning new skills. 
+    .contact-image
+
+    include /includes/footer.jade 
