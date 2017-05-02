@@ -1,0 +1,26 @@
+/* Desktop nav animation */
+
+$nav_animation_timing: 1s;
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes showFromHidden {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.anim-from-bottom {@include mobile-first(767px) {animation: $nav_animation_timing ease-out 0s 1 slideInFromBottom; } }
+.anim-from-hidden {@include mobile-first(767px) {animation: $nav_animation_timing cubic-bezier(1.000, -0.600, 0.630, 0.070) 0s 1 showFromHidden; } }

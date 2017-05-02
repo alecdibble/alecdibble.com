@@ -4,13 +4,11 @@
 @import 'mixins/mixins';
 @import 'normalize';
 @import 'global';
-
-
-
+@import 'animations';
 
 
 /* Nav */
-.nav { width: 100%; }
+.nav { width: 100%;   }
 .nav-title { @extend %lato-light; width: 100%; max-width: 400px; margin: auto; font-size: 60px; text-align: center; position: relative;
   @include mobile-first(1023px) { font-size: 72px;}
 }
@@ -58,7 +56,7 @@
 
 
 /* Footer */
-.footer { width: 100%; }
+.footer { width: 100%;   }
 .footer-icons { max-width: 500px; width: 100%; margin: auto;
   &:after { content: ""; display: table; clear: both;} 
 }
@@ -84,14 +82,17 @@
 
 /* About page */
 
-.body-about { @include mobile-first(1023px) { margin: 0 75px;}}
-.about-image{ width: 100%; background-image: url(/img/about-mountains.jpg); background-size: cover; height: 300px; background-repeat: no-repeat; max-width: $containerWidth; margin: auto;
+.alec-profile { border-radius: 200px; width: 200px; background-image: url(/img/alec-profile-1.jpg); margin: auto; background-size: 100%; height: 256px; background-repeat: no-repeat;
+@include mobile-first(767px) {float: right; margin: 30px; }
+}
+.body-about {   @include mobile-first(1023px) { margin: 0 75px;}}
+.about-image{ width: 100%; background-image: url(/img/about-mountains.jpg); background-size: cover; height: 300px; background-repeat: no-repeat; max-width: $containerWidth; margin: auto;  
   @include mobile-first(1023px) { height: 500px; width: 100%; background-size: 100%; background-position-y: 87%; }
 }
 
 /* blog listing page */
 
-.blog-listings { width: 100%; max-width: $containerWidth; margin: 0 auto; margin-bottom: 15%; 
+.blog-listings { width: 100%; max-width: $containerWidth; margin: 0 auto; margin-bottom: 15%;  
   @include mobile-first(767px) { margin-bottom: 10%;  }
 }
 .blog-listing { margin: auto; max-width: $containerWidth; background-color: $blue-translucent; margin-top: 15%; 
@@ -112,7 +113,7 @@
 
 /* blog post page */
 
-.blog-post-outer { width: 100%; max-width: $containerWidth; margin: 0 auto; margin-bottom: 15%; 
+.blog-post-outer { width: 100%; max-width: $containerWidth; margin: 0 auto; margin-bottom: 15%;  
   @include mobile-first(767px) { margin-bottom: 10%;  }
   @include mobile-first(1023px) { margin-bottom: 5%;  }
 }
@@ -132,8 +133,8 @@
 .blog-post-body { font-size: 22px; line-height: 190%; padding-bottom: 25px;}
 
 /* Contact page */
-.contact { margin: 50px 0 0 0;}
-.contact-image{ width: 100%; background-image: url(/img/contact-lake.jpg); background-size: cover; height: 300px; background-repeat: no-repeat; max-width: $containerWidth; margin: auto;
+.contact { margin: 50px 0 0 0;  }
+.contact-image{ width: 100%; background-image: url(/img/contact-lake.jpg); background-size: cover; height: 300px; background-repeat: no-repeat; max-width: $containerWidth; margin: auto;  
   @include mobile-first(1023px) { height: 500px; width: 100%; background-size: 100%; background-position-y: 87%; }
 }
 #input-name { 
@@ -144,9 +145,9 @@
   width: 100%; margin-bottom: 25px; -webkit-appearance: none; border: 2px solid #e1e1e1; padding: 10px; border-radius: 3px; padding-left: 20px; display: block;
   @include mobile-first(1023px) {width: 40%;}
 }
-#input-message { width: 100%;  border-radius: 3px; -webkit-appearance: none; border: 2px solid #e1e1e1; padding: 10px; padding-left: 20px;  }
+#input-message { width: 75%;  border-radius: 3px; -webkit-appearance: none; border: 2px solid #e1e1e1; padding: 10px; padding-left: 20px;  }
 
-.contact-submit { margin: 25px 0 50px 0; padding: 10px 20px; text-align: center; background: $blue; width: 200px; -webkit-appearance: none; color: white; font-size: 25px; border: 2px solid white;}
+.contact-submit { margin: 25px 0 0 0; padding: 10px 20px; text-align: center; background: $blue; width: 200px; -webkit-appearance: none; color: white; font-size: 25px; border: 2px solid white;}
 
 .contact-thanks {display: none; font-weight: 700; font-size: 24px; }
 

@@ -9,10 +9,17 @@ html(lang="en")
 
   body
     include /includes/nav/nav-about.jade
-    .body-clear
+    .body-clear.anim-from-bottom
       .body-about
         p
-          | Hi, I'm Alec. I do web engineering and marketing in Los Angeles, CA.
+          | Hi, I'm Alec. I do 
+          b
+            | web engineering 
+          | and 
+          b
+            | marketing 
+          | in Los Angeles, CA.
+        .alec-profile
         p
           | Coming from a background in high speed microelectronics and military test hardware, I gradually transitioned into web and marketing automation. I first started as a freelance contractor and then moved into full-time roles. Since then, I have provided consulting and freelance services for a variety of companies and projects. 
         p
@@ -28,11 +35,11 @@ html(lang="en")
           a(href="/contact")
             | click here 
           | to contact me.
-    .body-hr
-    .body-clear
+    .body-hr.anim-from-hidden 
+    .body-clear.anim-from-bottom
       .body-about
         p
           | In my spare time, I enjoy exploring the outdoors, making music, cooking, great food, and learning new skills. 
-    .about-image
+    .about-image.anim-from-bottom
 
     include /includes/footer.jade 
