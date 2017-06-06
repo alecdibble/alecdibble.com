@@ -1,4 +1,5 @@
-/* Desktop nav animation */
+
+/* Desktop nav on-load animation */
 
 $nav_animation_timing: 1s;
 
@@ -24,3 +25,19 @@ $nav_animation_timing: 1s;
 
 .anim-from-bottom {@include mobile-first(767px) {animation: $nav_animation_timing ease-out 0s 1 slideInFromBottom; } }
 .anim-from-hidden {@include mobile-first(767px) {animation: $nav_animation_timing cubic-bezier(1.000, -0.600, 0.630, 0.070) 0s 1 showFromHidden; } }
+
+
+/* Desktop nav scroll animation */
+
+@keyframes moveToFixed {
+  0% {
+    position: relative;
+  }
+  100% {
+    position: fixed;
+  }
+}
+
+.nav-animate {    position: relative;max-width: 1000px;margin: auto;left: -150px; }
+.nav-animate .nav-menu-wrapper { }
+.nav-animate .nav-menu-item {  float: none !important; margin: auto !important; width: 100% !important; text-align: right !important; }
